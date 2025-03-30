@@ -1,4 +1,10 @@
 import React from "react";
+import { AnimatedShinyTextDemo } from "./badge";
+import { AvatarCirclesDemo } from "./avatar";
+import { BentoDemo } from "./bento";
+import { Link } from "react-router-dom";
+import { AnimatedGridPattern } from "./magicui/animated-grid-pattern";
+import { cn } from "@/lib/utils";
 
 const Hero: React.FC = () => {
   return (
@@ -6,9 +12,19 @@ const Hero: React.FC = () => {
       <div className="orb orb-1"></div>
       <div className="orb orb-2"></div>
       <div className="orb orb-3"></div>
-
+      <AnimatedGridPattern
+        numSquares={30}
+        maxOpacity={0.1}
+        duration={3}
+        repeatDelay={1}
+        className={cn(
+          "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
+          "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12"
+        )}
+      />
       <div className="text-center max-w-4xl mx-auto mt-56">
         <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+          <AnimatedShinyTextDemo />
           <span className="gradient-text">AI DAO GOVERNANCE</span>
           <br />
           <span className="text-white text-7xl tracking-tighter">
@@ -20,7 +36,6 @@ const Hero: React.FC = () => {
           Take your DAO to the next level with intelligent governance. Make
           data-driven decisions, automate operations, and enhance
           transparency-all powered by AI.
-          <span className="text-blue-400">NESTFOLIO</span> now
         </p>
 
         <div className="flex gap-2 items-center justify-center mb-10">
@@ -45,6 +60,25 @@ const Hero: React.FC = () => {
         >
           <source src="capstone.mp4" type="video/mp4" />
         </video>
+      </div>
+      <div className="mb-20 w-[1000px]">
+        <p className="text-6xl text-center font-bold mb-10">How It Works</p>
+        <BentoDemo />
+      </div>
+      <div className="mb-20">
+        <AvatarCirclesDemo />
+      </div>
+      <div>
+        <h1 className="mb-10">
+          Design and build by{" "}
+          <Link to="https://x.com/avhidotsol" className="underline italic">
+            Avhi
+          </Link>{" "}
+          &{" "}
+          <Link to="https://x.com/4rjun" className="underline italic">
+            Arjun
+          </Link>
+        </h1>
       </div>
     </div>
   );

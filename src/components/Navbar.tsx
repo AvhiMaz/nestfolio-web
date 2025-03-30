@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
           </svg>
         </div>
         <div className="text-white font-bold tracking-wider">
-          NESTFOLIO<span className="text-xs text-gray-400 ml-1">beta</span>
+          NESTFOLIO<span className="text-xs text-gray-400 ml-1">devnet</span>
         </div>
         <div className="ml-8 hidden md:block">
           <a

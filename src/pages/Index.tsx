@@ -12,5 +12,3 @@ const Index: React.FC = () => {
 };
 
 export default Index;
-
-// bg-[#111111]
