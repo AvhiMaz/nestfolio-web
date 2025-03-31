@@ -39,9 +39,11 @@ const Hero: React.FC = () => {
         </p>
 
         <div className="flex gap-2 items-center justify-center mb-10">
-          <button className="bg-white text-black font-medium text-xl rounded-full mb-8 py-2 px-10">
-            Explore
-          </button>
+          <Link to="https://t.me/nestfolioDAO_bot">
+            <button className="bg-white text-black font-medium text-xl rounded-full mb-8 py-2 px-10">
+              Explore
+            </button>
+          </Link>
 
           <button className="font-medium text-xl rounded-full mb-8 py-2 px-10 border ">
             Learn more
